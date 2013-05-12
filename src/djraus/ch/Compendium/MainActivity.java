@@ -11,6 +11,9 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import djraus.ch.Compendium.util.WebRequest;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainActivity extends SherlockActivity {
     TextView prizePool;
     @Override
@@ -18,7 +21,9 @@ public class MainActivity extends SherlockActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         prizePool = (TextView) findViewById(R.id.prizePool);
-        new setPrizePool(false).execute();
+        new SetPrizePool(false).execute();
+        Timer t = new Timer();
+        t.schedule(new UpdatePrizePoolTask(),30000,30000);
     }
 
     @Override
@@ -36,16 +41,16 @@ public class MainActivity extends SherlockActivity {
         menu.add("Refresh Prize Pool").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                new setPrizePool(true).execute();
+                new SetPrizePool(true).execute();
                 return true;
             }
         }).setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
         return super.onCreateOptionsMenu(menu);
     }
 
-    private class setPrizePool extends AsyncTask<Void,Void,Integer>{
+    private class SetPrizePool extends AsyncTask<Void,Void,Integer>{
         private boolean update;
-        public setPrizePool(boolean update){
+        public SetPrizePool(boolean update){
             this.update = update;
         }
         @Override
@@ -58,6 +63,12 @@ public class MainActivity extends SherlockActivity {
             if(update){
                 Toast.makeText(MainActivity.this,"Prize Pool Updated!",Toast.LENGTH_SHORT).show();
             }
+        }
+    }
+
+    private class UpdatePrizePoolTask extends TimerTask {
+        public void run(){
+            new SetPrizePool(true).execute();
         }
     }
 }
