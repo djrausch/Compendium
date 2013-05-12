@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -17,7 +18,7 @@ public class MainActivity extends SherlockActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         prizePool = (TextView) findViewById(R.id.prizePool);
-        new setPrizePool().execute();
+        new setPrizePool(false).execute();
     }
 
     @Override
@@ -35,7 +36,7 @@ public class MainActivity extends SherlockActivity {
         menu.add("Refresh Prize Pool").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                new setPrizePool().execute();
+                new setPrizePool(true).execute();
                 return true;
             }
         }).setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
@@ -43,6 +44,10 @@ public class MainActivity extends SherlockActivity {
     }
 
     private class setPrizePool extends AsyncTask<Void,Void,Integer>{
+        private boolean update;
+        public setPrizePool(boolean update){
+            this.update = update;
+        }
         @Override
         protected Integer doInBackground(Void... voids) {
             return WebRequest.getPrizePool();
@@ -50,6 +55,9 @@ public class MainActivity extends SherlockActivity {
         @Override
         protected void onPostExecute(Integer result) {
             prizePool.setText(WebRequest.convertMoneyToString(result));
+            if(update){
+                Toast.makeText(MainActivity.this,"Prize Pool Updated!",Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
