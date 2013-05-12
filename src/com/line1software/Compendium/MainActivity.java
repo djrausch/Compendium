@@ -13,9 +13,6 @@ import com.line1software.Compendium.util.WebRequest;
 
 public class MainActivity extends SherlockActivity {
     TextView prizePool;
-    /**
-     * Called when the activity is first created.
-     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

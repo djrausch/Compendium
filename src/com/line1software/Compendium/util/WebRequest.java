@@ -17,6 +17,11 @@ import java.util.Locale;
 
 public class WebRequest {
 
+    /**
+     * Formats an integer into USD string
+     * @param dollars The dollar amount to convert
+     * @return The string representation of the dollar amount with included $ and no decimals.
+     */
     public static String convertMoneyToString(int dollars) {
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
         formatter.setCurrency(Currency.getInstance(Locale.US));
@@ -24,6 +29,10 @@ public class WebRequest {
         return formatter.format(dollars).replace(".00", "");
     }
 
+    /**
+     * Gets the most recent prize pool amount for Dota servers.
+     * @return The integer representation of the prize pool.
+     */
     public static int getPrizePool() {
         String result = null;
         int prizePool;
