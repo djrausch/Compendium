@@ -1,4 +1,4 @@
-package com.line1software.Compendium.util;
+package djraus.ch.Compendium.util;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;

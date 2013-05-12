@@ -1,15 +1,14 @@
-package com.line1software.Compendium;
+package djraus.ch.Compendium;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.line1software.Compendium.util.WebRequest;
+import djraus.ch.Compendium.util.WebRequest;
 
 public class MainActivity extends SherlockActivity {
     TextView prizePool;
