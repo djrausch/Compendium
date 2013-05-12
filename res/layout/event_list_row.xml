@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/eventCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        android:background="@drawable/goal_card">
+
+    <ImageView
+        android:id="@+id/eventReminder"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="-10dp"
+        android:layout_marginTop="-10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_launcher"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80 Days 12 Hours 30 Minutes"
+            android:textColor="#015f61"
+            android:id="@+id/eventCountdown"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="italic"
+            android:layout_marginTop="5dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UNTIL"
+            android:textColor="#015f61"
+            android:layout_below="@+id/eventCountdown"
+            android:id="@+id/until"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="2dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Event"
+            android:textColor="#015f61"
+            android:layout_below="@+id/until"
+            android:id="@+id/eventTitle"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="2dp"/>
+</RelativeLayout>
