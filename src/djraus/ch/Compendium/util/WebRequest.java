@@ -42,7 +42,7 @@ public class WebRequest {
         try {
             response = httpclient.execute(httppost);
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            return 1850230;
         }
 
         try {
@@ -59,7 +59,7 @@ public class WebRequest {
             result = sb.toString();
             reader.close();
         } catch (Exception e) {
-
+            return 1850230;
         }
 
         try {
