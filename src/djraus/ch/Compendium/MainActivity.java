@@ -88,6 +88,6 @@ public class MainActivity extends SherlockActivity {
     public void onResume(){
         super.onResume();
         t = new Timer();
-        t.schedule(new UpdatePrizePoolTask(),2000,2000);
+        t.schedule(new UpdatePrizePoolTask(),30000,30000);
     }
 }
