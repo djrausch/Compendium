@@ -1,5 +1,6 @@
 package djraus.ch.Compendium.util;
 
+import djraus.ch.Compendium.R;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -15,7 +16,7 @@ import java.text.NumberFormat;
 import java.util.Currency;
 import java.util.Locale;
 
-public class WebRequest {
+public class Utility {
 
     /**
      * Formats an integer into USD string
@@ -69,5 +70,31 @@ public class WebRequest {
         } catch (JSONException e) {
             return 1850230;
         }
+    }
+
+    /**
+     * Used to show the remaining dollars and compendium purchases for the goal
+     * @param goal The target dollar amount
+     * @param amountSold The current dollar amount
+     * @return A string with formatted response of $ - X Compendiums
+     */
+    public static String getRemainingCompendiums(int goal, int amountSold){
+        int moneyToGo = goal - amountSold;
+        int compendiumsToGo = (int) (moneyToGo /2.5);
+        return convertMoneyToString(moneyToGo) + " - " + formatNumber(compendiumsToGo) + " Compendiums";
+    }
+
+    /**
+     * Adds commas to a number
+     * @param number The number to format
+     * @return A string of the number with commas.
+     */
+    public static String formatNumber(int number){
+        NumberFormat formatter = NumberFormat.getNumberInstance();
+        return formatter.format(number);
+    }
+
+    public static String getSoldCompendiums(int amountSold){
+        return formatNumber((int) ((amountSold - 1600000) / 2.5));
     }
 }
