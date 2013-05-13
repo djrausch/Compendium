@@ -15,15 +15,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends SherlockActivity {
-    TextView prizePool;
+    private TextView prizePool;
+    private Timer t;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         prizePool = (TextView) findViewById(R.id.prizePool);
         new SetPrizePool(false).execute();
-        Timer t = new Timer();
-        t.schedule(new UpdatePrizePoolTask(),30000,30000);
     }
 
     @Override
@@ -45,6 +44,15 @@ public class MainActivity extends SherlockActivity {
                 return true;
             }
         }).setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        menu.add("Event List").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent i = new Intent();
+                i.setClass(MainActivity.this,EventList.class);
+                startActivity(i);
+                return true;
+            }
+        });
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -70,5 +78,16 @@ public class MainActivity extends SherlockActivity {
         public void run(){
             new SetPrizePool(true).execute();
         }
+    }
+    @Override
+    public void onPause(){
+        super.onPause();
+        t.cancel();
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        t = new Timer();
+        t.schedule(new UpdatePrizePoolTask(),2000,2000);
     }
 }
