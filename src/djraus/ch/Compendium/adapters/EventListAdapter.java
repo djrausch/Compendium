@@ -25,9 +25,9 @@ public class EventListAdapter extends ArrayAdapter<Event> {
         if (rowView == null) {
             rowView = context.getLayoutInflater().inflate(R.layout.event_list_row, null);
         }
-        TextView eventTitle = (TextView) rowView.findViewById(R.id.eventTitle);
+        /*TextView eventTitle = (TextView) rowView.findViewById(R.id.eventTitle);
         TextView eventCountdown = (TextView) rowView.findViewById(R.id.eventCountdown);
-        eventTitle.setText(events.get(position).getTitle());
+        eventTitle.setText(events.get(position).getTitle());*/
 
         return rowView;
     }

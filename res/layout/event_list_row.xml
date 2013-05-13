@@ -4,56 +4,88 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/eventCard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_margin="8dp"
         android:padding="10dp"
         android:background="@drawable/goal_card">
 
-    <ImageView
-        android:id="@+id/eventReminder"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginRight="-10dp"
-        android:layout_marginTop="-10dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/ic_launcher"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="80 Days 12 Hours 30 Minutes"
-            android:textColor="#015f61"
-            android:id="@+id/eventCountdown"
-            android:gravity="center"
-            android:layout_centerHorizontal="true"
-            style="@android:style/TextAppearance.DeviceDefault.Medium"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="italic"
-            android:layout_marginTop="5dp"/>
+    <RelativeLayout
+            android:id="@+id/details"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="UNTIL"
-            android:textColor="#015f61"
-            android:layout_below="@+id/eventCountdown"
-            android:id="@+id/until"
-            android:gravity="center"
-            android:layout_centerHorizontal="true"
-            android:textSize="10sp"
-            android:fontFamily="sans-serif-light"
-            android:layout_marginTop="2dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="22:10 CET"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:id="@+id/startTime"
+                style="@android:style/TextAppearance.Small"/>
 
-    <TextView
-            android:layout_width="wrap_content"
+        </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/team1Row"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Main Event"
-            android:textColor="#015f61"
-            android:layout_below="@+id/until"
-            android:id="@+id/eventTitle"
-            android:gravity="center"
-            android:layout_centerHorizontal="true"
-            style="@android:style/TextAppearance.DeviceDefault.Small"
-            android:fontFamily="sans-serif-light"
-            android:layout_marginTop="2dp"/>
+            android:layout_toLeftOf="@+id/details">
+
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/team1Logo"
+                android:src="@drawable/ic_launcher"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Na'vi"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:id="@+id/team1Name"
+                android:fontFamily="sans-serif-light"
+                android:textSize="22dp"
+                android:layout_toRightOf="@+id/team1Logo"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/team2Row"
+            android:layout_below="@+id/team1Row"
+            android:layout_toLeftOf="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/team2Logo"
+                android:src="@drawable/ic_launcher"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Mouz"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:id="@+id/team2Name"
+                android:fontFamily="sans-serif-light"
+                android:textSize="22dp"
+                android:layout_toRightOf="@+id/team2Logo"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
 </RelativeLayout>
