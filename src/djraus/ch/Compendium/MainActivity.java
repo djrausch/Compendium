@@ -95,7 +95,7 @@ public class MainActivity extends SherlockActivity {
             }
             totalSold.setText(Utility.getSoldCompendiums(result) + " " + getResources().getString(R.string.compendiumsSold));
             if(update){
-                Toast.makeText(MainActivity.this,"Prize Pool Updated!",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this,"Prize Pool Updated!",Toast.LENGTH_SHORT).show();
             }
         }
     }

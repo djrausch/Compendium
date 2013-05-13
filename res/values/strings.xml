@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Compendium Tracker</string>
+    <string name="app_name">Compendium</string>
     <string name="prizePoolHeader">TOTAL PRIZE POOL</string>
     <string name="defaultPool">$1,600,000</string>
     <string name="increasePurchase">The International Prize Pool is increased by $2.50 for every International Compendium purchased.</string>
