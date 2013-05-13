@@ -1,47 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_lgreen">
+    android:background="@color/background_tan"
+    android:gravity="center"
+    android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/widgetNextGoal"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/white"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/text_green" />
+        android:orientation="vertical"
+        android:background="@color/background_lgreen" >
 
-    <TextView
-        android:id="@+id/widgetCurrentProgress"
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/text_brown" />
+
+    </LinearLayout>
+	    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/widgetNextGoal"
-        android:layout_below="@+id/widgetNextGoal"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
         android:background="@color/white"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/text_green" />
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/widgetMoneyLeft"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/widgetCurrentProgress"
-        android:layout_below="@+id/widgetCurrentProgress"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/white"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/text_green" />
+        <TextView
+            android:id="@+id/widgetCurrentProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:text="@string/current"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/text_green" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/widgetNextGoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/white"
+            android:text="@string/goalWidget"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/text_green" />
+
+        <TextView
+            android:id="@+id/widgetMoneyLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:text="@string/remainder"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/text_green" />
+    </LinearLayout>
+
+</LinearLayout>

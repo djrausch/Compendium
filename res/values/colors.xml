@@ -4,5 +4,6 @@
     <color name="text_green">#015f61</color>
     <color name="text_brown">#946E51</color>
     <color name="background_lgreen">#abbab3</color>
+    <color name="background_tan">#cfcebb</color>
     
 </resources>

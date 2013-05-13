@@ -57,7 +57,7 @@ public class WidgetReciever extends AppWidgetProvider{
 		int amountLeft = nextGoal-currPool;
 		DecimalFormat df = new DecimalFormat("#,###,##0");  //Nicely formats decimal numbers
 		
-		String[] results = {res.getString(R.string.current) + "$" + df.format(currPool), res.getString(R.string.goalWidget) + "$" + df.format(nextGoal), res.getString(R.string.remainder) + "$" + df.format(amountLeft)};  //an array of all elements to go into the widget
+		String[] results = {res.getString(R.string.current) + " $" + df.format(currPool), res.getString(R.string.goalWidget) + " $" + df.format(nextGoal), res.getString(R.string.remainder) + " $" + df.format(amountLeft)};  //an array of all elements to go into the widget
 		
 		return results;
 	}

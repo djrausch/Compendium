@@ -5,4 +5,5 @@
     android:minHeight="100dp" 
     android:updatePeriodMillis="1800000"
     android:widgetCategory="home_screen">
+    <!-- Size equates to 4x2 and a half hour update cycle -->
  </appwidget-provider>
