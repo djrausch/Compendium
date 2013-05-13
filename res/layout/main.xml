@@ -38,11 +38,21 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/totalSold"
+                android:layout_below="@+id/prizePool"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/increasePurchase"
                 android:id="@+id/buyingCompendium"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/prizePool"
+                android:layout_below="@+id/totalSold"
                 style="@android:style/TextAppearance.Small"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"/>
@@ -105,12 +115,22 @@
                         android:textStyle="italic"
                         android:layout_marginTop="5dp"/>
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/statusGoal1"
+                    android:layout_below="@+id/stretchGoal1Price"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"/>
+
+                <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:singleLine="false"
                         android:text="@string/goal1Reward"
                         android:id="@+id/stretchGoal1Description"
-                        android:layout_below="@+id/stretchGoal1Price"
+                        android:layout_below="@+id/statusGoal1"
                         android:layout_alignParentLeft="true"
                         style="@android:style/TextAppearance.Small"
                         android:layout_marginTop="5dp"/>
@@ -151,10 +171,19 @@
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/statusGoal2"
+                        android:layout_below="@+id/stretchGoal2Price"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:singleLine="false"
                         android:text="@string/goal2Reward"
                         android:id="@+id/stretchGoal2Description"
-                        android:layout_below="@+id/stretchGoal2Price"
+                        android:layout_below="@+id/statusGoal2"
                         android:layout_alignParentLeft="true"
                         style="@android:style/TextAppearance.Small"
                         android:layout_marginTop="5dp"/>
@@ -195,10 +224,19 @@
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/statusGoal3"
+                        android:layout_below="@+id/stretchGoal3Price"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:singleLine="false"
                         android:text="@string/goal3Reward"
                         android:id="@+id/stretchGoal3Description"
-                        android:layout_below="@+id/stretchGoal3Price"
+                        android:layout_below="@+id/statusGoal3"
                         android:layout_alignParentLeft="true"
                         style="@android:style/TextAppearance.Small"
                         android:layout_marginTop="5dp"/>

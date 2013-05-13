@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="djraus.ch.Compendium"
-          android:versionCode="2"
-          android:versionName="1.0.1">
+          android:versionCode="3"
+          android:versionName="1.1">
 
     <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17"/>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".EventList"/>
+
         <reciever android:name="WidgetReciever" android:label="@string/widgetName" android:icon="@drawable/ic_launcher">
             <intent-filter>
                 <action android:name = "android.appwidget.action.APPWIDGET_UPDATE" />

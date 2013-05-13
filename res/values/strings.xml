@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Compendium Tracker</string>
+    <string name="app_name">Compendium</string>
     <string name="prizePoolHeader">TOTAL PRIZE POOL</string>
     <string name="defaultPool">$1,600,000</string>
     <string name="increasePurchase">The International Prize Pool is increased by $2.50 for every International Compendium purchased.</string>
@@ -14,6 +14,8 @@
     <string name="goal1Reward">Compendium owners receive a Limited Edition 125% Battle Booster that lasts until The International ends.</string>
     <string name="goal2Reward">Compendium Courier gains additional stages.</string>
     <string name="goal3Reward">Compendium owners will receive a newly created Immortal item.</string>
+    <string name="completed">Completed!</string>
+    <string name="compendiumsSold">Compendiums Sold!</string>
     <string name="widgetName">Compendium Tracker</string>
     <string name="current">Current: </string>
     <string name="goalWidget">Goal: </string>
