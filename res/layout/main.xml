@@ -20,7 +20,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:layout_alignParentTop="true"
-                style="@android:style/TextAppearance.DeviceDefault.Small"/>
+                style="@android:style/TextAppearance.Small"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentTop="true"
                     android:textColor="#946e5a"
-                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    style="@android:style/TextAppearance.Medium"
                     android:layout_marginTop="5dp"/>
 
             <RelativeLayout
@@ -100,7 +100,7 @@
                         android:id="@+id/stretchGoal1Price"
                         android:layout_below="@+id/stretchGoal1"
                         android:layout_alignParentLeft="true"
-                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        style="@android:style/TextAppearance.Large"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="italic"
                         android:layout_marginTop="5dp"/>
@@ -112,7 +112,7 @@
                         android:id="@+id/stretchGoal1Description"
                         android:layout_below="@+id/stretchGoal1Price"
                         android:layout_alignParentLeft="true"
-                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        style="@android:style/TextAppearance.Small"
                         android:layout_marginTop="5dp"/>
             </RelativeLayout>
 
@@ -144,7 +144,7 @@
                         android:id="@+id/stretchGoal2Price"
                         android:layout_below="@+id/stretchGoal2"
                         android:layout_alignParentLeft="true"
-                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        style="@android:style/TextAppearance.Large"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="italic"
                         android:layout_marginTop="5dp"/>
@@ -156,7 +156,7 @@
                         android:id="@+id/stretchGoal2Description"
                         android:layout_below="@+id/stretchGoal2Price"
                         android:layout_alignParentLeft="true"
-                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        style="@android:style/TextAppearance.Small"
                         android:layout_marginTop="5dp"/>
             </RelativeLayout>
 
@@ -188,7 +188,7 @@
                         android:id="@+id/stretchGoal3Price"
                         android:layout_below="@+id/stretchGoal3"
                         android:layout_alignParentLeft="true"
-                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        style="@android:style/TextAppearance.Large"
                         android:fontFamily="sans-serif-light"
                         android:textStyle="italic"
                         android:layout_marginTop="5dp"/>
@@ -200,7 +200,7 @@
                         android:id="@+id/stretchGoal3Description"
                         android:layout_below="@+id/stretchGoal3Price"
                         android:layout_alignParentLeft="true"
-                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        style="@android:style/TextAppearance.Small"
                         android:layout_marginTop="5dp"/>
             </RelativeLayout>
 

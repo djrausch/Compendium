@@ -14,4 +14,8 @@
     <string name="goal1Reward">Compendium owners receive a Limited Edition 125% Battle Booster that lasts until The International ends.</string>
     <string name="goal2Reward">Compendium Courier gains additional stages.</string>
     <string name="goal3Reward">Compendium owners will receive a newly created Immortal item.</string>
+    <string name="widgetName">Compendium Tracker</string>
+    <string name="current">Current: </string>
+    <string name="goalWidget">Goal: </string>
+    <string name="remainder">Remainder: </string>
 </resources>
