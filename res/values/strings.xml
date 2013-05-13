@@ -16,4 +16,8 @@
     <string name="goal3Reward">Compendium owners will receive a newly created Immortal item.</string>
     <string name="completed">Completed!</string>
     <string name="compendiumsSold">Compendiums Sold!</string>
+    <string name="widgetName">Compendium Tracker</string>
+    <string name="current">Current: </string>
+    <string name="goalWidget">Goal: </string>
+    <string name="remainder">Remainder: </string>
 </resources>
