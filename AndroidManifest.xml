@@ -19,13 +19,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".EventList"/>
-
-        <reciever android:name="WidgetReciever" android:label="@string/widgetName" android:icon="@drawable/ic_launcher">
+        <receiver android:label="@string/widgetName" android:name="WidgetReciever" android:icon="@drawable/ic_launcher" android:enabled="true">
             <intent-filter>
-                <action android:name = "android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-            <meta-data android:name="android.appwidget.provider" android:resource = "@xml/widget_info"/>
-        </reciever>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+    </intent-filter>
+    <meta-data android:name="android.appwidget.provider"
+               android:resource="@xml/widget_info" />
+        </receiver>
             		
     </application>
 </manifest>
