@@ -190,12 +190,65 @@
             </RelativeLayout>
 
             <RelativeLayout
-                    android:id="@+id/stretchGoal3Card"
+                    android:id="@+id/stretchGoal2aCard"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:padding="10dp"
                     android:layout_below="@+id/stretchGoal2Card"
+                    android:background="@drawable/goal_card">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goal2a"
+                        android:textColor="#015f61"
+                        android:id="@+id/stretchGoal2a"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goal2aPool"
+                        android:textColor="#015f61"
+                        android:id="@+id/stretchGoal2aPrice"
+                        android:layout_below="@+id/stretchGoal2a"
+                        android:layout_alignParentLeft="true"
+                        style="@android:style/TextAppearance.Large"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="italic"
+                        android:layout_marginTop="5dp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/statusGoal2a"
+                        android:layout_below="@+id/stretchGoal2aPrice"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:text="@string/goal2Reward"
+                        android:id="@+id/stretchGoal2aDescription"
+                        android:layout_below="@+id/statusGoal2a"
+                        android:layout_alignParentLeft="true"
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_marginTop="5dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/stretchGoal3Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="10dp"
+                    android:layout_below="@+id/stretchGoal2aCard"
                     android:background="@drawable/goal_card">
 
                 <TextView

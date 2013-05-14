@@ -5,15 +5,22 @@
     <string name="defaultPool">$1,600,000</string>
     <string name="increasePurchase">The International Prize Pool is increased by $2.50 for every International Compendium purchased.</string>
     <string name="stretchGoals">STRETCH GOALS</string>
+
     <string name="goal1">Goal 1</string>
     <string name="goal2">Goal 2</string>
-    <string name="goal3">Goal 3</string>
+    <string name="goal2a">Goal 3</string>
+    <string name="goal3">Goal 4</string>
+
     <string name="goal1Pool">$1,700,000</string>
     <string name="goal2Pool">$1,850,000</string>
+    <string name="goal2aPool">$2,000,000</string>
     <string name="goal3Pool">$2,600,000</string>
+
     <string name="goal1Reward">Compendium owners receive a Limited Edition 125% Battle Booster that lasts until The International ends.</string>
     <string name="goal2Reward">Compendium Courier gains additional stages.</string>
+    <string name="goal2aReward">Compendium Courier gains additional stages.</string>
     <string name="goal3Reward">Compendium owners will receive a newly created Immortal item.</string>
+
     <string name="completed">Completed!</string>
     <string name="compendiumsSold">Compendiums Sold!</string>
     <string name="widgetName">Compendium Tracker</string>
