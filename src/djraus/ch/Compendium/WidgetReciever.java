@@ -1,11 +1,14 @@
 package djraus.ch.Compendium;
 
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
 import android.widget.RemoteViews;
 import djraus.ch.Compendium.util.Utility;
 
@@ -13,39 +16,18 @@ import java.text.DecimalFormat;
 
 public class WidgetReciever extends AppWidgetProvider {
 
-    Context c = null;
-
-    @Override
-    public void onEnabled(Context context) {
-        super.onEnabled(context);
-
-//		c = context;
-//		Log.d("CompendiumWidget", "onPlace");
-//		new GetPrizePool().execute();
-//		
-//		RemoteViews rmViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
-//		
-//		rmViews.setTextViewText(R.id.widgetCurrentProgress, "0");
-//		rmViews.setTextViewText(R.id.widgetNextGoal, "1");
-//		rmViews.setTextViewText(R.id.widgetMoneyLeft, "2");
-//		
-//		String[] results = getPoolResults(context.getResources());
-//		RemoteViews rmViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
-//		
-//		rmViews.setTextViewText(R.id.widgetCurrentProgress, results[0]);
-//		rmViews.setTextViewText(R.id.widgetNextGoal, results[1]);
-//		rmViews.setTextViewText(R.id.widgetMoneyLeft, results[2]);
-    }
-
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
         Log.d("CompendiumWidget", "onUpdate");
 
-        c = context;
-
         for (int widgetId : appWidgetIds) {
             new GetPrizePool(widgetId, context, appWidgetManager).execute();
+            Intent intent = new Intent(context, MainActivity.class);
+            PendingIntent pIntent = PendingIntent.getActivity(context, 0, intent, 0);
+            RemoteViews rmViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
+            rmViews.setOnClickPendingIntent(R.id.iconButton, pIntent);
+            appWidgetManager.updateAppWidget(widgetId, rmViews);
         }
     }
 
@@ -93,7 +75,6 @@ public class WidgetReciever extends AppWidgetProvider {
         protected void onPostExecute(Integer result) {
             super.onPostExecute(result);
             Log.d("ConpendiumWidget", "onPost");
-//			DecimalFormat df = new DecimalFormat("#,###,##0");
             RemoteViews rmViews = new RemoteViews(c.getPackageName(), R.layout.widget_layout);
             String[] backgroundResults = getPoolResults(result, c.getResources());
 
