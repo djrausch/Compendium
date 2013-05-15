@@ -18,7 +18,7 @@ public class GoalListAdapter extends ArrayAdapter<Goal> {
     private int currentPrizePool;
 
     public GoalListAdapter(Activity context, ArrayList<Goal> goals, int currentPrizePool) {
-        super(context, R.layout.event_list_row, goals);
+        super(context, R.layout.goal_list_row, goals);
         this.context = context;
         this.goals = goals;
         this.currentPrizePool = currentPrizePool;
@@ -28,7 +28,7 @@ public class GoalListAdapter extends ArrayAdapter<Goal> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View rowView = convertView;
         if (rowView == null) {
-            rowView = context.getLayoutInflater().inflate(R.layout.event_list_row, null);
+            rowView = context.getLayoutInflater().inflate(R.layout.goal_list_row, null);
         }
         TextView goalTitle = (TextView) rowView.findViewById(R.id.stretchGoalTitle);
         TextView goalPrice = (TextView) rowView.findViewById(R.id.stretchGoalPrice);
@@ -49,5 +49,10 @@ public class GoalListAdapter extends ArrayAdapter<Goal> {
             goalStatus.setText(Utility.getRemainingCompendiums(g.getPrizePool(), currentPrizePool));
         }
         return rowView;
+    }
+
+    public void updateCurrentPrizePool(int currentPrizePool){
+        this.currentPrizePool = currentPrizePool;
+        super.notifyDataSetChanged();
     }
 }
