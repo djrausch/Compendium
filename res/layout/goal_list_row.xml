@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/stretchGoalCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        android:background="@drawable/goal_card">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goal2a"
+            android:textColor="#015f61"
+            android:id="@+id/stretchGoalTitle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goal2aPool"
+            android:textColor="#015f61"
+            android:id="@+id/stretchGoalPrice"
+            android:layout_below="@+id/stretchGoalTitle"
+            android:layout_alignParentLeft="true"
+            style="@android:style/TextAppearance.Large"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="italic"
+            android:layout_marginTop="5dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goalStatus"
+            android:layout_below="@+id/stretchGoalPrice"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="@string/goal2Reward"
+            android:id="@+id/stretchGoalDescription"
+            android:layout_below="@+id/goalStatus"
+            android:layout_alignParentLeft="true"
+            style="@android:style/TextAppearance.Small"
+            android:layout_marginTop="5dp"/>
+</RelativeLayout>
