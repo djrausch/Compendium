@@ -52,10 +52,16 @@ public class WidgetReciever extends AppWidgetProvider {
     private String[] getPoolResults(int backgroundResults, Resources res) {
         int currPool = backgroundResults;
         int nextGoal = 0;
-        if (currPool >= 2600000) {
+        if (currPool >= 3200000) {
             //Over
-        } else if (currPool >= 2000000) {
+        } else if (currPool >= 2600000) {
+            nextGoal = 3200000;
+        } else if (currPool >= 2400000) {
             nextGoal = 2600000;
+        } else if (currPool >= 2200000) {
+            nextGoal = 2400000;
+        } else if (currPool >= 2000000) {
+            nextGoal = 2200000;
         } else if (currPool >= 1850000) {
             nextGoal = 2000000;
         } else if (currPool >= 1700000) {
