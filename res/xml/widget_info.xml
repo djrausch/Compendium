@@ -4,6 +4,8 @@
     android:minWidth="294dp"
     android:minHeight="100dp" 
     android:updatePeriodMillis="1800000"
-    android:widgetCategory="home_screen">
+    android:widgetCategory="home_screen|keyguard"
+    android:resizeMode="vertical"
+    android:initialKeyguardLayout="@layout/widget_layout_lockscreen">
     <!-- Size equates to 4x2 and a half hour update cycle -->
  </appwidget-provider>
