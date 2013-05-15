@@ -69,7 +69,7 @@ public class MainActivity extends SherlockListActivity {
                 return true;
             }
         }).setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-        menu.add("Event List").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+       /* menu.add("Event List").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 Intent i = new Intent();
@@ -77,7 +77,7 @@ public class MainActivity extends SherlockListActivity {
                 startActivity(i);
                 return true;
             }
-        });
+        });*/
         return super.onCreateOptionsMenu(menu);
     }
 
