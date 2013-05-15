@@ -90,6 +90,7 @@ public class MainActivity extends SherlockListActivity {
 
         @Override
         protected Integer doInBackground(Void... voids) {
+            goals.clear();
             goals.add(new Goal("Goal 1", 1700000, "Compendium owners receive a Limited Edition 125% Battle Booster that lasts until The International ends."));
             goals.add(new Goal("Goal 2", 1850000, "Compendium Courier gains additional stages."));
             goals.add(new Goal("Goal 3", 2000000, "Compendium owners will receive a custom HUD skin."));
